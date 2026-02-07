@@ -11,15 +11,16 @@
 (function () {
   "use strict";
 
+  const DEFAULT_TITLE = "Google Gemini";
+
   const updateTitle = () => {
     const titleElement = document.querySelector("span.conversation-title");
+    const sessionTitle = titleElement?.innerText?.trim() ?? "";
 
-    if (titleElement && titleElement.innerText.trim() !== "") {
-      const newTitle = titleElement.innerText.trim();
-      // 今のタブ名と違う場合だけ更新（無限ループ防止）
-      if (document.title !== newTitle) {
-        document.title = newTitle;
-      }
+    const newTitle = sessionTitle !== "" ? sessionTitle : DEFAULT_TITLE;
+    // 今のタブ名と違う場合だけ更新（無限ループ防止）
+    if (document.title !== newTitle) {
+      document.title = newTitle;
     }
   };
 
