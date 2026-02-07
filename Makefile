@@ -7,14 +7,13 @@ define _help
 	echo '  env-show  : 現在の環境を表示'
 	echo ''
 	echo 'zshrc              : zshrc.d 用サブコマンドのヘルプ (make zshrc で一覧)'
-	echo '  zshrc list       : 分割ファイルをエイリアス・説明・パスで一覧'
-	echo '  zshrc path       : 指定エイリアスのファイル絶対パスを表示 (ALIAS=xxx)'
-	echo '  zshrc edit       : 分割ファイルを編集 (ALIAS=xxx でそのファイルのみ、未指定で全て)'
+	echo '  zshrc-list       : 分割ファイルを一覧 (DETAIL=1 でファイルパスも表示)'
+	echo '  zshrc-edit       : 分割ファイルを編集 (NAME=xxx でそのファイル、未指定で現在 env の local)'
 	echo ''
 	echo 'help               : この一覧を表示'
 endef
 
-.PHONY: default help link unlink env env-set env-show zshrc zshrc-list zshrc-edit zshrc-path
+.PHONY: default help link unlink env env-set env-show zshrc zshrc-list zshrc-edit
 default: help
 help:
 	@$(call _help)
@@ -29,9 +28,8 @@ unlink:
 
 define _help_zshrc
 	echo 'zshrc サブコマンド:'
-	echo '  make zshrc-list              : 一覧 (エイリアス・説明・パス)'
-	echo '  make zshrc-path ALIAS=xxx    : 指定エイリアスの絶対パスを表示'
-	echo '  make zshrc-edit [ALIAS=xxx]  : 編集 (ALIAS 未指定で全ファイル)'
+	echo '  make zshrc-list [DETAIL=1]    : 一覧 (DETAIL=1 でファイルパスも表示)'
+	echo '  make zshrc-edit [NAME=xxx]   : 編集 (NAME 未指定で現在 env の local ファイル)'
 endef
 
 define _help_env
@@ -58,13 +56,9 @@ zshrc:
 
 .PHONY: zshrc-list
 zshrc-list:
-	sh "$(CURDIR)/scripts/zshrc-list.sh" list
-
-.PHONY: zshrc-path
-zshrc-path:
-	@sh "$(CURDIR)/scripts/zshrc-list.sh" path "$(ALIAS)"
+	sh "$(CURDIR)/scripts/zshrc/list.sh" "$(DETAIL)"
 
 .PHONY: zshrc-edit
 zshrc-edit:
-	@sh "$(CURDIR)/scripts/zshrc-list.sh" edit "$(ALIAS)"
+	@sh "$(CURDIR)/scripts/zshrc/edit.sh" "$(NAME)"
 
