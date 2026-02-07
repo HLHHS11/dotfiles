@@ -1,0 +1,302 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "editor.semanticTokenColorCustomizations": {},
+    "workbench.colorCustomizations": {},
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
+    "python.defaultInterpreterPath": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "editor.minimap.enabled": false,
+
+    "latex-workshop.latex.tools": [
+        {
+            "name": "Latexmk (LuaLaTeX)",
+            "command": "latexmk",
+            "args": [
+                "-f", "-gg",
+                // "-pv",
+                "-lualatex", "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error", "%DOC%"
+            ]
+        },
+        // {"name": "Latexmk (XeLaTeX)", "command": "latexmk", "args": ["-f", "-gg", "-xelatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]},
+        // {"name": "Latexmk (upLaTeX)", "command": "latexmk", "args": ["-f", "-gg", "-pv", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]},
+        // {"name": "Latexmk (pLaTeX)", "command": "latexmk","args": ["-f", "-gg", "-latex='platex'", "-latexoption='-kanji=utf8 -no-guess-input-env'", "-synctex=1", "-interaction=nonstopmode", "-pdf", "-file-line-error", "%DOC%"]},
+        // {"name": "latexmk","command": "latexmk","args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "-pdflatex=lualatex", "%DOC%"]}
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "LuaLaTeX",
+            "tools": [
+                "Latexmk (LuaLaTeX)"
+            ]
+        },
+        // {
+        //     "name": "XeLaTeX",
+        //     "tools": [
+        //         "Latexmk (XeLaTeX)"
+        //     ]
+        // },
+        // {
+        //     "name": "upLaTeX",
+        //     "tools": [
+        //         "Latexmk (upLaTeX)"
+        //     ]
+        // },
+        // {
+        //     "name": "pLaTeX",
+        //     "tools": [
+        //         "Latexmk (pLaTeX)"
+        //     ]
+        // },
+        // {
+        //     "name": "latexmk",
+        //     "tools": [
+        //         "latexmk"
+        //     ]
+        // }
+    ],
+    "latex-workshop.latex.magic.args": [
+        "-f",
+        "-gg",
+        "-pv",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.synctex.gz",
+        "_minted*",
+        "*.nav",
+        "*.snm",
+        "*.vrb"
+    ],
+    "latex-workshop.linting.chktex.enabled": false,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // "latex-workshop.latex.recipe.default": "latexmk",
+    "latex-workshop.latex.recipe.default": "LuaLaTeX",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.intellisense.package.enabled": true,
+    "[latex]": {
+        "editor.wordWrap": "on",
+        "editor.wrappingIndent": "same",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.tabCompletion": "on",
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // "editor.formatOnSave": false,
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "[tex]": {
+        "editor.wordWrap": "on",
+        "editor.wrappingIndent": "same",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.tabCompletion": "on",
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2,
+    },
+
+    "markdown-preview-enhanced.scrollSync": false,
+    "git.confirmSync": false,
+    "editor.suggest.showSnippets": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "editor.fontWeight": "normal",
+    "git.autoRepositoryDetection": "openEditors",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off",
+        // "editor.inlayHints.enabled": "offUnlessPressed", // Ctrl+Optionを押すとインレイヒントを表示
+    },
+    // ---start TypeScriptのinlay hintsの設定---
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "[typescript]": {
+        "editor.inlayHints.enabled": "offUnlessPressed",
+    },
+    // ---end TypeScriptのinlay hintsの設定---
+    "editor.inlayHints.enabled": "offUnlessPressed",    // 全言語に対するインレイヒント (inlay hints) 有効化
+    "vim.easymotion": true,
+    // もともとeasymotionのキー一覧に","や";"があったが、押しにくいので消した
+    "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    // 以下４つは、vimでノーマルモード時に英字入力にするための設定。
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.google.inputmethod.Japanese.Roman",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        // `leader f`を全体(前方・後方)単語検索 に割り当てる
+        {
+            "before": ["<leader>", "f"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "w"],
+        },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-w>": false,
+        "<C-c>": false
+    },
+    "vim.surround": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.associations": {
+        "*.md": "markdown",
+        ".cursorrules": "markdown"
+    },
+    "markdown.copyFiles.destination": {
+        "*": "./images",
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.tabSize": 2
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.linkedEditing": true,
+    "cmake.showOptionsMovedNotification": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": "true",
+        "scminput": false,
+        "dart": "true"
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
+    "markdown-preview-enhanced.enablePreviewZenMode": true,
+    "editor.fontFamily": "'Droid sans mono', 'Noto Sans JP'",
+    "settingsSync.ignoredSettings": [
+        "editor.fontFamily",
+        "terminal.integrated.fontFamily"
+    ],
+    "git.autofetch": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "NOTE",
+        "[ ] TODO"
+    ],
+    "terminal.integrated.fontFamily": "'Droid sans mono', monospace",
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "scminput"
+    ],
+    "workbench.colorTheme": "Default Dark Modern",
+    "gitlens.ai.experimental.model": "openai:gpt-4o",
+    "workbench.activityBar.orientation": "vertical",
+    "dart.flutterSdkPaths": [
+        // "/Users/yama/fvm/versions/3.7.12/bin"
+        // // TODO: #404
+        // "/Users/yama/fvm/versions/3.29.0/bin"
+    ],
+    "terminal.integrated.env.osx": {},
+    "dart.sdkPath": "/Users/yama/fvm/versions/3.29.0",
+    "dart.sdkPaths": [
+        "/Users/yama/fvm/versions/3.29.0"
+    ],
+    "dart.showTodos": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4o-mini",
+    "cursor.diffs.useCharacterLevelDiffs": true,
+    // Jestがセーブ時に毎回実行されるのを防ぐ
+    "jest.runMode": "on-demand",
+    "editor.tabSize": 2,
+    "markdown.marp.pptx.editable": "on",
+    "githubPullRequests.fileListLayout": "tree",
+    "cursor.cpp.enablePartialAccepts": true,
+    "editor.accessibilitySupport": "off",
+    "todo-tree.highlights.highlightDelay": 0,
+    "update.releaseTrack": "prerelease",
+    "cursor.composer.textSizeScale": 1.15,
+    "database-client.autoSync": true,
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "cursorpyright.analysis.autoImportCompletions": true,
+    "cursorpyright.analysis.typeCheckingMode": "basic",
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "redhat.telemetry.enabled": true,
+    "explorer.confirmPasteNative": false,
+}
