@@ -1,0 +1,3 @@
+aliases	エイリアス設定	01-aliases.zsh
+path	PATH・環境変数	10-path.zsh
+local	環境依存 (gcloud, nvm, pyenv 等)	90-local.zsh
