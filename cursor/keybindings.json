@@ -1,0 +1,95 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    {
+        "key": "shift+alt+cmd+o",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "cmd+[IntlYen]",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "cmd+k ctrl+alt+cmd+[IntlYen]",
+        "command": "-workbench.action.splitEditorRight"
+    },
+    {
+        "key": "cmd+[Equal]",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "cmd+r ctrl+alt+cmd+[IntlYen]",
+        "command": "-workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+shift+cmd+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.switchWindow"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "key": "shift+alt+cmd+f",
+        "command": "search.action.openEditor"
+    },
+    // [Cursor TabよりIntellisenseを優先する]
+    // 参考: https://github.com/getcursor/cursor/issues/2518#issuecomment-2777665541
+    // NOTE: 一時的に設定を廃止。なぜなら、補完とintellisenseの第１候補が異なる場合に、
+    // 異なるintellisense補完が採用されて直感に反することが多かったから (Cursor Tabが全面的に優先されてたときのデメリットのほうがマシだった)
+    // {
+    //     "key": "tab",
+    //     "command": "editor.action.acceptCursorTabSuggestion",
+    //     "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    // },
+    // {
+    //     "key": "tab",
+    //     "command": "-editor.action.acceptCursorTabSuggestion"
+    // },
+]
