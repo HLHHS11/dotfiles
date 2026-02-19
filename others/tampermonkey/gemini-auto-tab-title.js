@@ -14,25 +14,42 @@
   const DEFAULT_TITLE = "Google Gemini";
 
   const updateTitle = () => {
-    const titleElement = document.querySelector("span.conversation-title");
-    const sessionTitle = titleElement?.innerText?.trim() ?? "";
+    const sessionTitle =
+      document
+        .querySelector('a[data-test-id="conversation"].selected')
+        ?.querySelector(".conversation-title")
+        ?.textContent?.trim() ?? "";
 
-    const newTitle = sessionTitle !== "" ? sessionTitle : DEFAULT_TITLE;
-    // 今のタブ名と違う場合だけ更新（無限ループ防止）
+    const newTitle = sessionTitle || DEFAULT_TITLE;
+
+    // 無限ループ防止（同じタイトルなら変更しない）
     if (document.title !== newTitle) {
       document.title = newTitle;
     }
   };
 
-  // ページ内の変化（チャットの切り替えなど）を監視する設定
+  // DOM変化監視
   const observer = new MutationObserver((mutations) => {
-    updateTitle();
+    for (const m of mutations) {
+      // class変化（selected付与/除去）を検知
+      if (m.type === "attributes" && m.attributeName === "class") {
+        updateTitle();
+        return;
+      }
+
+      // ノード追加/削除（新チャット生成など）を検知
+      if (m.type === "childList") {
+        updateTitle();
+        return;
+      }
+    }
   });
 
-  // 監視の開始
   observer.observe(document.body, {
-    childList: true,
     subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ["class"],
   });
 
   // 初回実行
